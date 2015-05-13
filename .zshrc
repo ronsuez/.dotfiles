@@ -107,3 +107,30 @@ PATH=$PATH:${GOPATH//://bin:}/bin
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
+
+#Python Aliases
+
+alias py='python'
+alias ipy='ipython'
+alias py3='python3'
+alias ipy3='ipython3'
+alias wo='workon'
+alias pf='pip freeze | sort'
+alias pi='pip install'
+alias pun='pip uninstall'
+
+#Django Aliases
+
+alias dj="python manage.py"
+alias drs="python manage.py runserver"
+alias dsh="python manage.py shell"
+alias dsm="python manage.py schemamigration"
+alias dmm="python manage.py makemigration"
+alias dm="python manage.py migrate"
+alias ddd="python manage.py dumpdata"
+alias dld="python manage.py loaddata"
+alias dt="python manage.py test"
+
+# Show all alias related python
+pya() { alias | grep 'python\|workon\|pip' | \
+    sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g";}
