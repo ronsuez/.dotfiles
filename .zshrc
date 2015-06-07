@@ -96,6 +96,8 @@ pya() { alias | grep 'python\|workon\|pip' | \
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" 
+
 # Kubernetes config
 export KUBERNETES_PROVIDER=vagrant
