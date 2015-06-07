@@ -51,7 +51,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/ronsuez/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"
+export PATH="/Users/ronsuez/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:$PATH"
 export PATH=/usr/local/mongodb/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=/opt/local/bin:$PATH
@@ -134,3 +134,8 @@ alias dt="python manage.py test"
 # Show all alias related python
 pya() { alias | grep 'python\|workon\|pip' | \
     sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g";}
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
