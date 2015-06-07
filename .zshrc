@@ -1,46 +1,21 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="half-life"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
+#User configuration
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH="/Users/ronsuez/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:$PATH"
 export PATH=/usr/local/mongodb/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=/opt/local/bin:$PATH
-#export MANPATH="/usr/local/man:$MANPATH"
 
-
-
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -89,9 +64,6 @@ alias ddd="python manage.py dumpdata"
 alias dld="python manage.py loaddata"
 alias dt="python manage.py test"
 
-# Show all alias related python
-pya() { alias | grep 'python\|workon\|pip' | \
-    sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g";}
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
